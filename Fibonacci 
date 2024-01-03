@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script>
+        function fibonacci()
+        {
+          var a=0,b=1,fib=0,n,i;
+          var n=prompt("Enter the length of series:");
+          document.write(a+"</br> "+b+"</br>");
+          for(i=2;i<n;i++)
+          {
+            fib=a+b;
+            document.write(fib+"</br>");
+            a=b;
+            b=fib;
+          }
+        }
+    </script>
+    <form>
+        <input type="button" value="fibonacci" onclick="fibonacci();">
+    </form>
+ </body>
+</html>
