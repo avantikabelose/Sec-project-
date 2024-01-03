@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function factorial()
+            {
+                 var fact=1,i=1;
+		 // take input from user using prompt
+                  var a=prompt("enter a number:");
+		  while(i<=a)
+                  {
+		      // calculate factorial of number
+                      fact=fact*i;
+		      i++;
+                   }
+		  // print the factorial value
+                 document.write("factorial of number "+a+" is:",fact);
+             }
+        </script>
+        <form>
+            <input type="button" value="factorial" title="calculate factorial" onclick="factorial();">
+        </form>
+    </body>
+</html>
