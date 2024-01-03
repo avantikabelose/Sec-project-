@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Number Validation</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Mobile Number Validation</h2>
+
+<form onsubmit="return validateForm()">
+    <label for="mobileNumber">Enter your mobile number:</label>
+    <input type="text" id="mobileNumber" name="mobileNumber" placeholder="e.g., 1234567890">
+    <span id="mobileError" class="error"></span>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    function validateForm() {
+        // Get the mobile number value
+        var mobileNumber = document.getElementById("mobileNumber").value;
+
+        // Regular expression for a valid 10-digit mobile number
+        var mobileNumberPattern = /^\d{10}$/;
+
+        // Check if the mobile number matches the pattern
+        if (mobileNumberPattern.test(mobileNumber)) {
+            // Reset error message
+            document.getElementById("mobileError").innerHTML = "";
+            return true; // Form submission allowed
+        } else {
+            // Display error message
+            document.getElementById("mobileError").innerHTML = "Please enter a valid 10-digit mobile number.";
+            return false; // Prevent form submission
+        }
+    }
+</script>
+
+</body>
+</html>
