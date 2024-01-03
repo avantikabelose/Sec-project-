@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Numbers</title>
+</head>
+<body>
+
+<h2>Even Numbers between 1 and 100</h2>
+
+<button onclick="printEvenNumbers()">Print Even Numbers</button>
+
+<p id="result"></p>
+
+<script>
+    function printEvenNumbers() {
+        let evenNumbers = [];
+        for (let i = 2; i <= 100; i += 2) {
+            evenNumbers.push(i);
+        }
+        document.getElementById("result").innerHTML = "Even Numbers: " + evenNumbers.join(", ");
+    }
+</script>
+
+</body>
+</html>
